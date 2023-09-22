@@ -6,7 +6,7 @@ This is a solution to the [3-column preview card component challenge on Frontend
 
 #### Project links
 
-- Solution URL:
+- Solution URL: https://github.com/coderSeth13/FEM_3_COLUMN_PREVIEW_CARD_COMPONENT.git
 - Live Site URL: https://coderseth13.github.io/FEM_3_COLUMN_PREVIEW_CARD_COMPONENT/
 
 #### Social links
