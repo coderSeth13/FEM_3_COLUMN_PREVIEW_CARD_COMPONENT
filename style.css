@@ -1,0 +1,226 @@
+:root {
+  --clr-primary-hsl-500: 31, 77%, 52%;
+  --clr-primary-hsl-800: 184, 100%, 22%;
+  --clr-primary-hsl-900: 179, 100%, 13%;
+
+  --clr-secondary-hsl-100: 0, 0%, 100%;
+  --clr-secondary-hsl-200: 0, 0%, 95%;
+
+  --clr-primary-500: hsl(var(--clr-primary-hsl-500));
+  --clr-primary-800: hsl(var(--clr-primary-hsl-800));
+  --clr-primary-900: hsl(var(--clr-primary-hsl-900));
+
+  --clr-secondary-100: hsl(var(--clr-secondary-hsl-100));
+  --clr-secondary-200: hsl(var(--clr-secondary-hsl-200));
+
+  --ff-primary: "Big Shoulders Display", cursive;
+  --ff-secondary: "Lexend Deca", sans-serif;
+
+  --fw-regular: 400;
+  --fw-bold: 700;
+
+  --fs-100: 0.9375rem;
+  --fs-200: 2.5rem;
+
+  --size-100: 0.5rem;
+  --size-200: 1rem;
+  --size-300: 2.3rem;
+  --size-400: 2.5rem;
+  --size-500: 3rem;
+  --size-600: 3.5rem;
+  --size-700: 4rem;
+  --size-800: 4.5rem;
+
+  /* Tokens */
+
+  --clr-bg-body: var(--clr-secondary-200);
+  --clr-body: var(--clr-secondary-200);
+  --clr-bg-sedans-card: var(--clr-primary-500);
+  --clr-bg-suvs-card: var(--clr-primary-800);
+  --clr-bg-luxury-card: var(--clr-primary-900);
+  --clr-bg-btn: var(--clr-secondary-200);
+  --clr-btn: var(--clr-secondary-200);
+  --clr-heading: var(--clr-secondary-200);
+
+  --ff-body: var(--ff-secondary);
+  --ff-heading: var(--ff-primary);
+
+  --fw-body: var(--fw-regular);
+  --fw-heading: var(--fw-bold);
+  --fw-btn: var(--fw-bold);
+
+  --fs-body: var(--fs-100);
+  --fs-heading: var(--fs-200);
+  --fs-btn: var(--fs-100);
+}
+
+/* Reset Styles */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font: inherit;
+}
+
+img,
+svg,
+picture {
+  display: block;
+  max-width: 100%;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li a {
+  text-decoration: none;
+}
+
+/* General Styles */
+
+body {
+  font-family: var(--ff-body);
+  font-weight: var(--fw-body);
+  font-size: var(--fs-body);
+  color: var(--clr-body);
+  background-color: var(--clr-bg-body);
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  margin-inline: var(--size-200);
+  box-shadow: 0.5rem 1rem 5rem hsl(var(--clr-secondary-hsl-300), 0.5);
+  border-radius: var(--size-100);
+}
+
+.card {
+  padding: var(--size-300);
+}
+
+.card-sedans {
+  background: var(--clr-bg-sedans-card);
+  border-radius: var(--size-100) var(--size-100) 0 0;
+}
+
+.card-suvs {
+  background: var(--clr-bg-suvs-card);
+}
+
+.card-luxury {
+  background: var(--clr-bg-luxury-card);
+  border-radius: 0 0 var(--size-100) var(--size-100);
+}
+
+.heading {
+  font-family: var(--ff-heading);
+  font-weight: var(--fw-heading);
+  font-size: var(--fs-heading);
+  color: var(--clr-heading);
+  text-transform: uppercase;
+}
+
+.btn {
+  font-size: var(--fs-btn);
+  font-weight: var(--fw-btn);
+  color: var(--clr-btn);
+  background: var(--clr-bg-btn);
+  cursor: pointer;
+  padding: var(--size-200) var(--size-400);
+  outline: 1px solid var(--clr-secondary-200);
+  outline-offset: -0.015rem;
+  border: none;
+  border-radius: 100vw;
+  transition: background 250ms ease-in;
+}
+
+.card-sedans .btn {
+  color: var(--clr-bg-sedans-card);
+}
+
+.card-suvs .btn {
+  color: var(--clr-bg-suvs-card);
+}
+
+.card-luxury .btn {
+  color: var(--clr-bg-luxury-card);
+}
+
+.btn:hover,
+.btn:focus {
+  color: var(--clr-secondary-100);
+  background: transparent;
+  outline: 2px solid var(--clr-secondary-200);
+}
+
+.coderSeth {
+  --cS-color: 228, 45%, 14%;
+  color: hsl(var(--cS-color));
+  font-size: var(--size-200);
+  text-align: center;
+  padding-block: var(--size-200);
+}
+
+.coderSeth a {
+  --cS-color: 228, 45%, 44%;
+  color: hsl(var(--cS-color));
+}
+
+/* Utilities */
+
+.medium-spacer {
+  margin-top: var(--size-300);
+}
+
+p[data-main-paragraph] {
+  max-width: 30ch;
+  color: hsl(var(--clr-secondary-hsl-100), 0.75);
+}
+
+.medium-spacer {
+  margin-top: var(--size-400);
+}
+
+[data-large-spacer] {
+  margin-top: var(--size-800);
+}
+
+/* Small screen widths */
+
+@media (max-width: 900px) {
+  .container {
+    margin-top: var(--size-100);
+  }
+}
+
+/* Big screen widths */
+
+@media (min-width: 900px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 65rem;
+  }
+
+  .flex-group {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .card-sedans {
+    border-radius: var(--size-100) 0 0 var(--size-100);
+  }
+
+  .card-luxury {
+    border-radius: 0 var(--size-100) var(--size-100) 0;
+  }
+}
